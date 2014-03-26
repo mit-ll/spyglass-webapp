@@ -1,8 +1,3 @@
-PATH
-  remote: vendor/gems/yubikey-1.3.1
-  specs:
-    yubikey (1.3.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -35,7 +30,12 @@ GEM
     bcrypt (3.1.7)
     bcrypt-ruby (3.1.5)
       bcrypt (>= 3.1.3)
+    bootstrap-sass (3.0.2.1)
+      sass (~> 3.2)
+    bootstrap-will_paginate (0.0.10)
+      will_paginate
     builder (3.1.4)
+    cancan (1.6.10)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -51,6 +51,8 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.0.2)
+    font-awesome-rails (4.0.3.1)
+      railties (>= 3.2, < 5.0)
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (1.5.3)
@@ -69,6 +71,8 @@ GEM
     multi_json (1.9.0)
     orm_adapter (0.5.0)
     polyglot (0.3.4)
+    rabl (0.9.3)
+      activesupport (>= 2.3.14)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -89,10 +93,12 @@ GEM
     rdoc (4.1.1)
       json (~> 1.4)
     ref (1.0.5)
-    sass (3.3.2)
-    sass-rails (4.0.1)
+    role_model (0.8.1)
+    sass (3.2.15)
+    sass-rails (4.0.2)
       railties (>= 4.0.0, < 5.0)
-      sass (>= 3.1.10)
+      sass (~> 3.2.0)
+      sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0.0)
     sdoc (0.4.0)
       json (~> 1.8)
@@ -125,6 +131,8 @@ GEM
       json (>= 1.8.0)
     warden (1.2.3)
       rack (>= 1.0)
+    will_paginate (3.0.5)
+    yubikey (1.3.1)
     yubikey_database_authenticatable (0.4.1)
       devise (>= 2.2.3)
       yubikey (~> 1.3.1)
@@ -133,16 +141,23 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt-ruby (= 3.1.5)
+  bootstrap-sass (= 3.0.2.1)
+  bootstrap-will_paginate (= 0.0.10)
+  cancan (~> 1.6.10)
   coffee-rails (~> 4.0.0)
   devise (~> 3.2.3)
+  font-awesome-rails (~> 4.0.3.0)
   jbuilder (~> 1.2)
   jquery-rails
+  rabl
   rails (= 4.0.3)
+  role_model
   sass-rails (~> 4.0.0)
   sdoc
   sqlite3
   therubyracer
   turbolinks
   uglifier (>= 1.3.0)
-  yubikey (= 1.3.1)!
+  yubikey (~> 1.3.1)
   yubikey_database_authenticatable (~> 0.4.1)

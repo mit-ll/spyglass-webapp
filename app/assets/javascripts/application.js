@@ -13,4 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap
 //= require_tree .
+
+var timeZone = jstz.determine();
+document.cookie = 'jstz_time_zone='+timeZone.name()+';';
