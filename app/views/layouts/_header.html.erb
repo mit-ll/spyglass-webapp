@@ -26,7 +26,7 @@
             <ul class="dropdown-menu">
               <li class="dropdown-header">
               <% roles = current_user.role_symbols.join(", ") %>
-              <%= "#{current_user.login} (#{roles})" %>
+              <%= "#{current_user.email} (#{roles})" %>
               </li>
               <li class="divider"></li>
               <li><%= link_to raw(fa_icon("gear") + " User Settings"), edit_user_path(current_user.id) %></li>
@@ -43,7 +43,7 @@
           <div class="dropdown-menu dropdown-form" style="padding: 15px; padding-bottom: 15px;">
             <%= form_for "user", :url => user_session_path do |f| %>
               <div class="form-group">
-                <%= f.text_field :login, :placeholder => "Username", 
+                <%= f.text_field :email, :placeholder => "Username", 
                   :class => "form-control", :style => "margin-bottom: 15px;" %>
                 <%= f.password_field :password, :placeholder => 
                 "Password", :class => "form-control", :style => "margin-bottom: 15px;" %>

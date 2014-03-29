@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140314175052) do
+ActiveRecord::Schema.define(version: 20140329030608) do
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20140314175052) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "useyubikey"
+    t.boolean  "use_yubikey"
     t.string   "registeredyubikey"
   end
 

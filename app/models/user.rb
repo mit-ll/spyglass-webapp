@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+  devise :yubikey_database_authenticatable, :rememberable, :trackable, 
+         :timeoutable
+  
+  def registeredyubikey=(yubiotp)
+    write_attribute(:registeredyubikey, yubiotp[0..11])
+  end
+
 end
