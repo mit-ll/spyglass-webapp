@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140329030608) do
+ActiveRecord::Schema.define(version: 20140329042537) do
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20140329030608) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "use_yubikey"
-    t.string   "registeredyubikey"
+    t.string   "registered_yubikey"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

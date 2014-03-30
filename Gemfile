@@ -10,9 +10,10 @@ gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
-gem "yubikey", '1.4.0'
+gem "yubikey", '~> 1.4.0'
 gem "devise", "~> 3.2.3"
-gem "yubikey_database_authenticatable", git: 'https://github.com/patcable/yubikey_database_authenticatable.git'
+gem "yubikey_database_authenticatable", 
+    path: 'vendor/gems/yubikey_database_authenticatable-0.5.0'
 gem 'bootstrap-sass', '3.0.2.1'
 gem "font-awesome-rails", "~> 4.0.3.0"
 gem "cancan", "~> 1.6.10"

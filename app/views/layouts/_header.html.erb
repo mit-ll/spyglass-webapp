@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
       </button>
       <% if user_signed_in? %>
-        <%= link_to "LPaRTS", parts_path, :class => "navbar-brand" %>
+        <%= link_to "Koguchi", root_path, :class => "navbar-brand" %>
       <% else %>
         <%= link_to "Koguchi", root_path, :class => "navbar-brand" %>
       <% end %>
@@ -22,14 +22,12 @@
          <li class="dropdown">
          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
            <span class="glyphicon glyphicon-user"></span> 
-           <%= "#{current_user.firstname} #{current_user.lastname}" %> <b class="caret"></b></a>
+           <%= "#{current_user.email}" %> <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li class="dropdown-header">
-              <% roles = current_user.role_symbols.join(", ") %>
-              <%= "#{current_user.email} (#{roles})" %>
+              <%= "#{current_user.email} (roleshere)" %>
               </li>
               <li class="divider"></li>
-              <li><%= link_to raw(fa_icon("gear") + " User Settings"), edit_user_path(current_user.id) %></li>
               <li><%= link_to raw(fa_icon("sign-out") + " Sign Out"), destroy_user_session_path, method: "delete" %></li>
             </ul>
           </li>

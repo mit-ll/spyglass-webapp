@@ -1,8 +1,7 @@
-GIT
-  remote: https://github.com/patcable/yubikey_database_authenticatable.git
-  revision: 86635722119909a5637de28ec5b087531f574538
+PATH
+  remote: vendor/gems/yubikey_database_authenticatable-0.5.0
   specs:
-    yubikey_database_authenticatable (0.4.2)
+    yubikey_database_authenticatable (0.5.0)
       devise (>= 2.2.3)
       yubikey (>= 1.3.1)
 
@@ -133,7 +132,7 @@ GEM
       json (>= 1.8.0)
     warden (1.2.3)
       rack (>= 1.0)
-    yubikey (1.4.0)
+    yubikey (1.4.1)
 
 PLATFORMS
   ruby
@@ -154,5 +153,5 @@ DEPENDENCIES
   therubyracer
   turbolinks
   uglifier (>= 1.3.0)
-  yubikey (= 1.4.0)
+  yubikey (~> 1.4.0)
   yubikey_database_authenticatable!
