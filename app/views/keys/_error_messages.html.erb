@@ -1,0 +1,11 @@
+<% if @key.errors.any? %>
+  <div id="error_explanation">
+    <h3>Errors</h3>
+    <ul>
+    <% @key.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <hr>
+<% end %>

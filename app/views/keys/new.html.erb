@@ -1,0 +1,24 @@
+<% provide(:title, "New Key") %>
+<% content_for(:active, "key") %>
+<div class="col-md-10 col-md-offset-1">
+  <h1>Add a Key</h1>
+  <p>Keys are good.</p>
+
+  <div class="col-md-8 col-md-offset-2">
+    <%= form_for @key do |f| %>
+      <%= render 'error_messages' %>
+      <div class="form-group">
+        <%= f.label :keyname, "Key Name" %>
+        <%= f.text_field :keyname, placeholder: "Key Name", 
+                                   class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :sshkey, "SSH Key" %>
+        <%= f.text_area :sshkey, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.submit "Add Key", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>

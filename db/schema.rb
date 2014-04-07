@@ -11,7 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140329042537) do
+ActiveRecord::Schema.define(version: 20140404161528) do
+
+  create_table "keys", force: true do |t|
+    t.integer  "user_id"
+    t.string   "keyname"
+    t.string   "sshkey"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "keys", ["user_id"], name: "index_keys_on_user_id"
+
+  create_table "sessions", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "key_id"
+    t.string   "container_host"
+    t.string   "container_port"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

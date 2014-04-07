@@ -1,3 +1,8 @@
 <% provide(:title, "home") %>
-<h1>Welcome to Koguchi</h1>
-<p>This is a web interface to request a containerized SSH instance</p>
+<% if user_signed_in? %>
+  <h1>Hi!</h1>
+  <p>You can initiate a new session, or look at your keys.</p>
+<% else %>
+  <h1>Welcome to Koguchi</h1>
+  <p>This is a web interface to request a containerized SSH instance. Sign in!</p>
+<% end %>

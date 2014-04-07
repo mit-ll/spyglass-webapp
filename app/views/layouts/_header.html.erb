@@ -15,7 +15,10 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li>
+        <% if user_signed_in? %>
+          <li><%= link_to "Sessions", sessions_path %></li>
+          <li><%= link_to "Keys", keys_path %></a></li>
+        <% end %>
       </ul>
       <% if user_signed_in? %>
       <ul class="nav navbar-nav navbar-right">
