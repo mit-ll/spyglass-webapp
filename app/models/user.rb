@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
 
   attr_accessor :yubiotp
 
-  has_many :key
+  has_many :keys
 
   def registeredyubikey=(yubiotp)
     write_attribute(:registeredyubikey, yubiotp[0..11])
