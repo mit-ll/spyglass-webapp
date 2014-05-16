@@ -16,7 +16,14 @@
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <% if user_signed_in? %>
-          <li><%= link_to "Sessions", sessions_path %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Sessions <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "New Session", new_session_path %></li>
+              <li><%= link_to "View Sessions", sessions_path %></li>
+            </ul>
+          </li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             Keys <b class="caret"></b></a>
