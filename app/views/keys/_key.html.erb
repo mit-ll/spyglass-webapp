@@ -1,0 +1,7 @@
+<tr>
+  <td><%= key.keyname %></td>
+  <td><%= key.sha1hash %></td>
+  <td><%= key.created_at.strftime("%d%b%y %H%m %Z") %></td>
+  <td><%= button_to "delete", key, :method => :delete, 
+          :class => "btn btn-danger btn-xs" %></td>
+</tr>

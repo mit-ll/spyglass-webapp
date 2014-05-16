@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140404161528) do
+ActiveRecord::Schema.define(version: 20140407141330) do
 
   create_table "keys", force: true do |t|
     t.integer  "user_id"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20140404161528) do
     t.string   "sshkey"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "sha1hash"
   end
 
   add_index "keys", ["user_id"], name: "index_keys_on_user_id"

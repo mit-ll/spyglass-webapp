@@ -18,6 +18,7 @@ gem 'bootstrap-sass', '3.0.2.1'
 gem "font-awesome-rails", "~> 4.0.3.0"
 gem "cancan", "~> 1.6.10"
 gem "role_model"
+gem 'sshkey', '~> 1.6.1'
 
 group :doc do
   gem 'sdoc', require: false

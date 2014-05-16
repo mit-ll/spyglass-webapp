@@ -1,2 +1,21 @@
-<h1>Keys#index</h1>
-<p>Find me in app/views/keys/index.html.erb</p>
+<div class="col-md-10 col-md-offset-1">
+<h1>Keys</h1>
+
+<% if @keys.count > 0 %>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>SHA1 Hash</th>
+	<th>Created</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <%= render @keys %>
+  </table>
+<% else %>
+  <hr>
+  <h2 align="center"><strong>Nothing to see here...</strong></h2>
+  <h3 align="center">Consider <%= link_to "adding an SSH key", new_key_path %>.
+  </h3>
+<% end %>
