@@ -4,6 +4,7 @@ require 'json'
 class SessionsController < ApplicationController
   def new
     @user = current_user
+    @keys = current_user.keys
     @session = Session.new
   end
 

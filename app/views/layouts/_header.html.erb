@@ -39,10 +39,10 @@
          <li class="dropdown">
          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
            <span class="glyphicon glyphicon-user"></span> 
-           <%= "#{current_user.email}" %> <b class="caret"></b></a>
+           <%= "#{current_user.login}" %> <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li class="dropdown-header">
-              <%= "#{current_user.email} (roleshere)" %>
+              <%= "#{current_user.login} (roleshere)" %>
               </li>
               <li class="divider"></li>
               <li><%= link_to raw(fa_icon("sign-out") + " Sign Out"), destroy_user_session_path, method: "delete" %></li>
@@ -58,7 +58,7 @@
           <div class="dropdown-menu dropdown-form" style="padding: 15px; padding-bottom: 15px;">
             <%= form_for "user", :url => user_session_path do |f| %>
               <div class="form-group">
-                <%= f.text_field :email, :placeholder => "Username", 
+                <%= f.text_field :login, :placeholder => "Username", 
                   :class => "form-control", :style => "margin-bottom: 15px;" %>
                 <%= f.password_field :password, :placeholder => 
                 "Password", :class => "form-control", :style => "margin-bottom: 15px;" %>
