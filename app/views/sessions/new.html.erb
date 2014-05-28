@@ -2,9 +2,10 @@
 <% content_for(:active, "session") %>
 <div class="col-md-10 col-md-offset-1">
   <h1>Create a new session</h1>
-  <p>Keys are good.</p>
+  <hr>
 
   <div class="col-md-8 col-md-offset-2">
+    <% if @keys.count > 0 %>
     <%= form_for @session do |f| %>
       <%= render 'error_messages' %>
       <div class="form-group">
@@ -17,5 +18,9 @@
         <%= f.submit "Spawn Container", class: "btn btn-primary" %>
       </div>
     <% end %>
+  <% else %>
+      <h2 align="center"><strong>Nothing to see here...</strong></h2>
+      <h3 align="center">Consider <%= link_to "adding an SSH key", new_key_path %>. 
+  <% end %>
   </div>
 </div>
