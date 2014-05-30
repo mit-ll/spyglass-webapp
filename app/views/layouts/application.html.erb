@@ -12,9 +12,9 @@
   <div class="container">
     <% flash.each do |key, value| %>
       <% next if key == "timedout" %>
-      <% if key == :notice %>
+      <% if key == "notice" %>
         <% display = "success" %>
-      <% elsif key == :alert %>
+      <% elsif key == "alert" %>
         <% display = "danger" %>
       <% else %>
         <% display = key %>

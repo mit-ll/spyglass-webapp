@@ -1,0 +1,8 @@
+<tr>
+  <td><%= truncate(session.container_hashid, :length => 12, :omission => '') %></td>
+  <td><%= session.container_host %></td>
+  <td><%= session.container_port %></td>
+  <td><%= session.created_at.strftime("%d%b%y %H%m %Z") %></td>
+  <td><%= button_to "delete", session, :method => :delete, 
+          :class => "btn btn-danger btn-xs" %></td>
+</tr>

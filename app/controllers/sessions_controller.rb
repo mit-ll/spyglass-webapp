@@ -12,15 +12,43 @@ class SessionsController < ApplicationController
     @session = Session.new(session_params)
     @session.user_id = current_user.id
     # Start the HTTParty
-    @result = HTTParty.post("http://localhost:5000/new", 
+    response = HTTParty.post("http://localhost:5000/new", 
                   :body => { :DbKeyId => @session.key_id,
                              :DbUserId => @session.user_id 
                            }.to_json, 
                   :headers => { 'Content-Type' => 'application/json' } )
-    redirect_to root_path
+    body = JSON.parse(response.body)
+
+    @session.container_hashid = body["DockerId"]
+    @session.container_host = "lludacris.llan.ll.mit.edu"
+    @session.container_port = body["SshPort"]
+    @session.user_id = body["DbUserId"]
+    @session.key_id = body["DbKeyId"]
+    if @session.save  
+      redirect_to sessions_path
+    else
+      flash.now[:danger] = "Container didnt work."
+      render 'new'
+    end
+  end
+  def destroy
+    @session = Session.find(params[:id])
+    response = HTTParty.delete("http://localhost:5000/delete",
+                  :body => { :DockerId => @session.container_hashid }.to_json,
+                  :headers => { 'Content-Type' => 'application/json' } )
+    body = JSON.parse(response.body)
+    if body["result"] == "success"
+      @session.destroy
+      redirect_to sessions_path
+    else
+      flash.now[:danger] = "Delete did not succeed"
+      render 'index'
+    end
   end
 
   def index
+    session_query = Session.where(user_id: current_user.id)
+    @sessions = session_query.order("created_at DESC")
   end
 
   def show

@@ -15,8 +15,8 @@
 /log/*.log
 /tmp
 
-# Ignore saved datasheets
-/public/system
+# Ignore cached assets
+/public/assets
 
 # Ignore other unneeded files.
 database.yml
