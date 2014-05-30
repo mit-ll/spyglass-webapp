@@ -1,8 +1,11 @@
 <% provide(:title, "home") %>
 <% if user_signed_in? %>
   <div class="col-md-10 col-md-offset-1">
-    <h1>Hi!</h1>
-    <p>You can initiate a new session, or look at your keys.</p>
+    <h1>Welcome</h1>
+    <p>Koguchi is an application that manages non-persistant containers that
+       allow you to access a private network.</p>
+    <p> To get started, add a public SSH
+       key to your profile, then start a new session using the menus above.</p>
   </div>
 <% else %>
   <div class="col-md-10 col-md-offset-1">
