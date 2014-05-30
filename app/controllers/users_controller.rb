@@ -42,6 +42,13 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    if params[:roles]
+      role_mask_value = 0 
+      params[:roles].each do |r| 
+        role_mask_value = role_mask_value + User.mask_for(r.to_sym).to_i
+      end
+      @user.roles_mask = role_mask_value
+    end
     if @user.save
       flash[:success] = "User Added."
       redirect_to @user
