@@ -6,6 +6,10 @@ $navbar-default-link-active-color: #fff;
 $navbar-default-link-hover-color: #fff;
 @import "bootstrap";
 
+label.yubi {
+  font-weight: normal;
+}
+
 body {
   padding-top: 50px;
   padding-bottom: 20px;

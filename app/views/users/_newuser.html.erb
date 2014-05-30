@@ -13,11 +13,11 @@
         <%= f.password_field :password_confirmation, :class => "form-control" %>
       </div>
       <div class="form-group">
-        <p><strong>Yubikey Enabled</strong></p>
-        <%= radio_button_tag(:use_yubikey, "true") %>
-        <%= label_tag(:use_yubikey_enabled, "Yes") %>
-        <%= radio_button_tag(:use_yubikey, "false") %>
-        <%= label_tag(:use_yubikey_disabled, "No") %>
+        <p><strong>Yubikey Status</strong</p> <br />
+          <%= f.radio_button :use_yubikey, "1" %>
+          <%= f.label :use_yubikey_true, "Enabled", class: "yubi" %>
+        <%= f.radio_button :use_yubikey, "0" %>
+        <%= f.label :use_yubikey_false, "Disabled", class: "yubi" %>
       </div>
       <div class="form-group">
         <%= f.label :registered_yubikey, "Yubikey ID" %>

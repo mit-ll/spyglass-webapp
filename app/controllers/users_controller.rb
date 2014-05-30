@@ -30,7 +30,7 @@ class UsersController < ApplicationController
         end
       end 
     end 
-    
+
     if @user.update_attributes(user_edit_params)
       flash[:success] = "User settings edited."
       redirect_to user_path

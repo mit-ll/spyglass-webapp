@@ -22,10 +22,14 @@
     <dd><%= print_time(@user.created_at) %></dd>
     <dt>Updated at</dt>
     <dd><%= print_time(@user.updated_at) %></dd>
-    <dt>Roles Mask</dt>
-    <dd><%= @user.roles_mask %></dd>
     <dt>Roles</dt>
     <dd><%= @user.role_symbols.join(", ") %></dd>
+    <dt>Yubikey Status</dt>
+    <dd><%= @user.use_yubikey %></dd>
+    <% if @user.use_yubikey == true %>
+      <dt>Registered Yubikey</dt>
+      <dd><%= @user.registered_yubikey %></dd>
+    <% end %>
   </dl>
   <hr>
   <h2>Edit User</h2>
