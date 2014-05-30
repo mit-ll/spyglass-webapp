@@ -1,5 +1,6 @@
 require 'httparty'
 require 'json'
+require 'socket'
 
 class SessionsController < ApplicationController
   load_and_authorize_resource
@@ -21,7 +22,7 @@ class SessionsController < ApplicationController
     body = JSON.parse(response.body)
 
     @session.container_hashid = body["DockerId"]
-    @session.container_host = "lludacris.llan.ll.mit.edu"
+    @session.container_host = Socket.gethostbyname(Socket.gethostname).first
     @session.container_port = body["SshPort"]
     @session.user_id = body["DbUserId"]
     @session.key_id = body["DbKeyId"]
