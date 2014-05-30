@@ -7,4 +7,11 @@ module ApplicationHelper
       "#{base_title} | #{page_title}"
     end 
   end
+  def print_time(timestamp)
+    if timestamp
+      timestamp.strftime("%d %b %Y @ %I:%m %P %Z")
+    else
+      "No Value"
+    end 
+  end
 end

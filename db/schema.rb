@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140528203307) do
+ActiveRecord::Schema.define(version: 20140530143814) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20140528203307) do
     t.boolean  "use_yubikey"
     t.string   "registered_yubikey"
     t.string   "login"
+    t.integer  "roles_mask"
   end
 
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree

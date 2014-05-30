@@ -1,0 +1,35 @@
+<% provide(:title, "User #{@user.login}") %>
+<div class="col-md-6 col-md-offset-3">
+  <h1><%= "#{@user.login}" %></h1>
+  <dl class="dl-horizontal">
+    <dt>Identifier</dt>
+    <dd><%= @user.id %></dd>
+    <dt>Login</dt>
+    <dd><%= @user.login %></dd>
+    <dt>Remember Created at</dt>
+    <dd><%= print_time(@user.remember_created_at) %></dd>
+    <dt>Sign-in Count</dt>
+    <dd><%= @user.sign_in_count %></dd>
+    <dt>Current Sign-in at</dt>
+    <dd><%= print_time(@user.current_sign_in_at) %></dd>
+    <dt>Current Sign-in IP</dt>
+    <dd><%= @user.current_sign_in_ip %></dd>
+    <dt>Last Sign-in at</dt>
+    <dd><%= print_time(@user.last_sign_in_at) %></dd>
+    <dt>Last Sign-in IP</dt>
+    <dd><%= @user.last_sign_in_ip %></dd>
+    <dt>Created at</dt>
+    <dd><%= print_time(@user.created_at) %></dd>
+    <dt>Updated at</dt>
+    <dd><%= print_time(@user.updated_at) %></dd>
+    <dt>Roles Mask</dt>
+    <dd><%= @user.roles_mask %></dd>
+    <dt>Roles</dt>
+    <dd><%= @user.role_symbols.join(", ") %></dd>
+  </dl>
+  <hr>
+  <h2>Edit User</h2>
+  <p>This is only to change roles. Name/Mail information will be reloaded
+  from LDAP on save.</p>
+  <%= render 'newuser' %>
+</div>

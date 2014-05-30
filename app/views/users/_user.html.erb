@@ -1,0 +1,9 @@
+<tr>
+  <td><%= link_to user.id, user %></td>
+  <td><%= user.login %></td>
+  <td><%= user.role_symbols.join(", ") %></td>
+  <td><%= print_time(user.created_at) %></td>
+  <td><%= print_time(user.last_sign_in_at) %></td>
+  <td><%= button_to "delete", user, :method => :delete, 
+          :class => "btn btn-danger btn-xs" %></td>
+</tr>

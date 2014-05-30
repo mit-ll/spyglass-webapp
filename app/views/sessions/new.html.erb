@@ -1,10 +1,9 @@
 <% provide(:title, "New Session") %>
 <% content_for(:active, "session") %>
 <div class="col-md-10 col-md-offset-1">
-  <h1>Create a new session</h1>
+  <h1>New Session</h1>
   <hr>
-
-  <div class="col-md-8 col-md-offset-2">
+  <div class="col-md-6 col-md-offset-3">
     <% if @keys.count > 0 %>
     <%= form_for @session do |f| %>
       <%= render 'error_messages' %>

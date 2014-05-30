@@ -2,6 +2,7 @@ require 'httparty'
 require 'json'
 
 class SessionsController < ApplicationController
+  load_and_authorize_resource
   def new
     @user = current_user
     @keys = current_user.keys

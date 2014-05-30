@@ -21,6 +21,7 @@ gem "cancan", "~> 1.6.10"
 gem "role_model"
 gem 'sshkey', '~> 1.6.1'
 gem 'pg', '0.17.1'
+gem 'will_paginate', '3.0.5'
 
 group :doc do
   gem 'sdoc', require: false

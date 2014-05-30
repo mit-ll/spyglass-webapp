@@ -1,0 +1,22 @@
+<% provide(:title, "User List") %>
+<% content_for(:active, "users") %>
+<div class="col-md-10 col-md-offset-1">
+<h1>Users</h1>
+<hr>
+<%= will_paginate %>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Login</th>
+      <th>Roles</th>
+      <th>Created</th>
+      <th>Last Seen</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <%= render @users %>
+</table>
+<%= will_paginate %>
+</div>
+
