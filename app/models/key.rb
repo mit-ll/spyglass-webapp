@@ -3,6 +3,7 @@ class Key < ActiveRecord::Base
   before_save :hash_key
   
   belongs_to :user  
+  belongs_to :session
 
   validate :key_must_be_sshkey
 

@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   attr_accessor :yubiotp
 
   has_many :keys
+  has_many :sessions
   before_create :set_role
   before_save :ensure_user
 
