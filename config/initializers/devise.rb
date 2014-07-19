@@ -252,8 +252,8 @@ Devise.setup do |config|
   # When using omniauth, Devise cannot automatically set Omniauth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
-  config.yubikey_api_id = "1"
-  config.yubikey_api_key = "VkliQTq2CPdmnCw5iz9hfOCp4"
-  config.yubikey_api_url = "https://cadneutron/wsapi/2.0/verify"
+  config.yubikey_api_id = "2"
+  config.yubikey_api_key = "yN6WMIfxdZUVlRInEJZRPtM93p4="
+  config.yubikey_api_url = "https://llsrc-devyubi/wsapi/2.0/verify"
   config.yubikey_certificate_chain = Rails.root.join('config','yubikey-validation-cert.crt').to_s
 end

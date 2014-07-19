@@ -22,7 +22,7 @@
       <div class="form-group">
         <%= f.label :registered_yubikey, "Yubikey ID" %>
         <%= f.text_field :registered_yubikey, :placeholder => "Token ID",
-            :class => "form-control" %>
+            :class => "form-control", :maxlength => 12 %>
       </div>
       <div class="form-group">
         <p><strong>Enable Role</strong></p>
