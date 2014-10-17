@@ -77,6 +77,7 @@ GEM
     minitest (5.3.4)
     multi_json (1.10.0)
     multi_xml (0.5.5)
+    mysql (2.9.1)
     orm_adapter (0.5.0)
     pg (0.17.1)
     polyglot (0.3.4)
@@ -156,6 +157,7 @@ DEPENDENCIES
   httparty (~> 0.13.1)
   jbuilder (~> 1.2)
   jquery-rails
+  mysql
   pg (= 0.17.1)
   rails (= 4.1.0)
   role_model
