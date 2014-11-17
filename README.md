@@ -14,7 +14,7 @@ To begin, you will need the following components:
    Private Network Access."
 2. An idea of what target OS you want your containers to run. For the demonstration, we used Ubuntu
    14.04 from the Docker Registry.
-3. A version of (SudoSH)[http://sourceforge.net/projects/sudosh/] compiled for that OS.
+3. A version of [SudoSH](http://sourceforge.net/projects/sudosh/) compiled for that OS.
 4. The scripts used to create the Docker image. These are in the docker-spyglass repository.
 5. A MySQL instance
 
