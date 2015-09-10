@@ -20,7 +20,7 @@ To begin, you will need the following components:
 
 ## Setup
 
-1. Clone all associated repositories (in addition to this  repository, get [spyglass-containerd](https://github.com/mitll-cyber/spyglass-containerd), [spyglass-seekerd](https://github.com/mitll-cyber/spyglass-seekerd), [spyglass-dockerfile](https://github.com/mitll-cyber/spyglass-dockerfile).
+1. Clone all associated repositories (in addition to this repository, also clone [spyglass-containerd](https://github.com/mitll-cyber/spyglass-containerd), [spyglass-seekerd](https://github.com/mitll-cyber/spyglass-seekerd), [spyglass-dockerfile](https://github.com/mitll-cyber/spyglass-dockerfile)).
 2. Set up Passenger/Apache (or NGINX) as one would do for a Rails app.
 2. Configure settings for this app's `config/database.yml` values
 3. Devise needs to be configured for a local validation server if you're not using one. This is done
