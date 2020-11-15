@@ -11,7 +11,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem "yubikey", '~> 1.4.0'
-gem "devise", "~> 3.2.3"
+gem "devise", "~> 4.7.3"
 gem 'httparty', '~> 0.13.1'
 gem "yubikey_database_authenticatable", 
     path: 'vendor/gems/yubikey_database_authenticatable-0.5.0'
