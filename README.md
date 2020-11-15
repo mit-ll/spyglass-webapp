@@ -36,3 +36,11 @@ To begin, you will need the following components:
 7. If you would like auditing, you may want to look at `seekerd`. This requires the setup of another
    host to capture the audit daemon, and is not as well implemented. Changes to the seeker code 
    are required to not send screen/keyboard input data with every keystroke.
+   
+## Disclaimer
+
+DISTRIBUTION STATEMENT A. Approved for public release: distribution unlimited.
+
+This material is based upon work supported by the Under Secretary of Defense for Research and Engineering under Air Force Contract No. FA8721-05-C-0002. Any opinions, findings, conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the Under Secretary of Defense for Research and Engineering.
+
+The software/firmware is provided to you on an As-Is basis
